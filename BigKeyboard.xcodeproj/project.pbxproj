@@ -10,6 +10,10 @@
 		F12680421952AB04001493E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12680411952AB04001493E9 /* AppDelegate.swift */; };
 		F12680441952AB04001493E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12680431952AB04001493E9 /* Images.xcassets */; };
 		F12680501952AB04001493E9 /* BigKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F126804F1952AB04001493E9 /* BigKeyboardTests.swift */; };
+		F12680621952AB26001493E9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12680611952AB26001493E9 /* KeyboardViewController.swift */; };
+		F12680651952AB26001493E9 /* com.tomsiphoneapps.BigKeyboard.Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F126805D1952AB26001493E9 /* com.tomsiphoneapps.BigKeyboard.Keyboard.appex */; };
+		F18A4D5519539BDC00DE15EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A4D5419539BDC00DE15EF /* ViewController.swift */; };
+		F18A4D5719539CBF00DE15EF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18A4D5619539CBF00DE15EF /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,7 +24,35 @@
 			remoteGlobalIDString = F126803B1952AB04001493E9;
 			remoteInfo = BigKeyboard;
 		};
+		F12680631952AB26001493E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F12680341952AB04001493E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F126805C1952AB26001493E9;
+			remoteInfo = Keyboard;
+		};
+		F12680661952AB26001493E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F12680341952AB04001493E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F126805C1952AB26001493E9;
+			remoteInfo = Keyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F126806B1952AB26001493E9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F12680651952AB26001493E9 /* com.tomsiphoneapps.BigKeyboard.Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F126803C1952AB04001493E9 /* BigKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +62,11 @@
 		F12680491952AB04001493E9 /* BigKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F126804E1952AB04001493E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F126804F1952AB04001493E9 /* BigKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigKeyboardTests.swift; sourceTree = "<group>"; };
+		F126805D1952AB26001493E9 /* com.tomsiphoneapps.BigKeyboard.Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = com.tomsiphoneapps.BigKeyboard.Keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12680601952AB26001493E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F12680611952AB26001493E9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		F18A4D5419539BDC00DE15EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F18A4D5619539CBF00DE15EF /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +84,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F126805A1952AB26001493E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +99,7 @@
 			children = (
 				F126803E1952AB04001493E9 /* BigKeyboard */,
 				F126804C1952AB04001493E9 /* BigKeyboardTests */,
+				F126805E1952AB26001493E9 /* Keyboard */,
 				F126803D1952AB04001493E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +109,7 @@
 			children = (
 				F126803C1952AB04001493E9 /* BigKeyboard.app */,
 				F12680491952AB04001493E9 /* BigKeyboardTests.xctest */,
+				F126805D1952AB26001493E9 /* com.tomsiphoneapps.BigKeyboard.Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +120,8 @@
 				F12680411952AB04001493E9 /* AppDelegate.swift */,
 				F12680431952AB04001493E9 /* Images.xcassets */,
 				F126803F1952AB04001493E9 /* Supporting Files */,
+				F18A4D5419539BDC00DE15EF /* ViewController.swift */,
+				F18A4D5619539CBF00DE15EF /* ViewController.xib */,
 			);
 			path = BigKeyboard;
 			sourceTree = "<group>";
@@ -103,6 +151,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F126805E1952AB26001493E9 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F12680611952AB26001493E9 /* KeyboardViewController.swift */,
+				F126805F1952AB26001493E9 /* Supporting Files */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		F126805F1952AB26001493E9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F12680601952AB26001493E9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,10 +178,13 @@
 				F12680381952AB04001493E9 /* Sources */,
 				F12680391952AB04001493E9 /* Frameworks */,
 				F126803A1952AB04001493E9 /* Resources */,
+				F126806B1952AB26001493E9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F12680641952AB26001493E9 /* PBXTargetDependency */,
+				F12680671952AB26001493E9 /* PBXTargetDependency */,
 			);
 			name = BigKeyboard;
 			productName = BigKeyboard;
@@ -141,6 +209,23 @@
 			productReference = F12680491952AB04001493E9 /* BigKeyboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F126805C1952AB26001493E9 /* Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F12680681952AB26001493E9 /* Build configuration list for PBXNativeTarget "Keyboard" */;
+			buildPhases = (
+				F12680591952AB26001493E9 /* Sources */,
+				F126805A1952AB26001493E9 /* Frameworks */,
+				F126805B1952AB26001493E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keyboard;
+			productName = Keyboard;
+			productReference = F126805D1952AB26001493E9 /* com.tomsiphoneapps.BigKeyboard.Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,6 +241,10 @@
 					F12680481952AB04001493E9 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = F126803B1952AB04001493E9;
+					};
+					F126805C1952AB26001493E9 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4G3DB9BY88;
 					};
 				};
 			};
@@ -173,6 +262,7 @@
 			targets = (
 				F126803B1952AB04001493E9 /* BigKeyboard */,
 				F12680481952AB04001493E9 /* BigKeyboardTests */,
+				F126805C1952AB26001493E9 /* Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -182,11 +272,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18A4D5719539CBF00DE15EF /* ViewController.xib in Resources */,
 				F12680441952AB04001493E9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F12680471952AB04001493E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F126805B1952AB26001493E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -200,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18A4D5519539BDC00DE15EF /* ViewController.swift in Sources */,
 				F12680421952AB04001493E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +311,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F12680591952AB26001493E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12680621952AB26001493E9 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -219,6 +326,16 @@
 			isa = PBXTargetDependency;
 			target = F126803B1952AB04001493E9 /* BigKeyboard */;
 			targetProxy = F126804A1952AB04001493E9 /* PBXContainerItemProxy */;
+		};
+		F12680641952AB26001493E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F126805C1952AB26001493E9 /* Keyboard */;
+			targetProxy = F12680631952AB26001493E9 /* PBXContainerItemProxy */;
+		};
+		F12680671952AB26001493E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F126805C1952AB26001493E9 /* Keyboard */;
+			targetProxy = F12680661952AB26001493E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -240,7 +357,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Corwine (2MXD63QQXB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -260,6 +378,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "FFADF1AC-0FF5-433D-8381-796E29301A25";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -282,7 +401,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Corwine (2MXD63QQXB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -295,6 +415,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "FFADF1AC-0FF5-433D-8381-796E29301A25";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -358,6 +479,38 @@
 			};
 			name = Release;
 		};
+		F12680691952AB26001493E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "$(inherited)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "com.tomsiphoneapps.BigKeyboard.$(TARGET_NAME:rfc1034identifier)";
+				PROVISIONING_PROFILE = "$(inherited)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F126806A1952AB26001493E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "$(inherited)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				INFOPLIST_FILE = Keyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "com.tomsiphoneapps.BigKeyboard.$(TARGET_NAME:rfc1034identifier)";
+				PROVISIONING_PROFILE = "$(inherited)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +530,7 @@
 				F12680551952AB04001493E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F12680561952AB04001493E9 /* Build configuration list for PBXNativeTarget "BigKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -385,6 +539,16 @@
 				F12680581952AB04001493E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F12680681952AB26001493E9 /* Build configuration list for PBXNativeTarget "Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12680691952AB26001493E9 /* Debug */,
+				F126806A1952AB26001493E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
