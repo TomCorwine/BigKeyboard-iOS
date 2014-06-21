@@ -8,10 +8,13 @@
 
 import UIKit
 
+let kScrollSensetivityKey = "kScrollSensetivityKey"
+
 class ViewController: UIViewController, UITextFieldDelegate
 {
   @IBOutlet var textField : UITextField
   @IBOutlet var label : UILabel
+  @IBOutlet var slider : UISlider
   
   override func viewDidLoad()
   {
@@ -20,6 +23,19 @@ class ViewController: UIViewController, UITextFieldDelegate
     // Show keyboard on start
     self.textField.becomeFirstResponder()
     self.textField.delegate = self
+  }
+
+  override func viewWillAppear(animated: Bool)
+  {
+    super.viewWillAppear(animated)
+
+    self.slider.value = NSUserDefaults.standardUserDefaults().floatForKey(kScrollSensetivityKey)
+  }
+  
+  @IBAction func sliderMoved(sender: UISlider)
+  {
+    NSUserDefaults.standardUserDefaults().setFloat(self.slider.value, forKey: kScrollSensetivityKey)
+    NSUserDefaults.standardUserDefaults().synchronize()
   }
   
   // Hook so new line can be detected
