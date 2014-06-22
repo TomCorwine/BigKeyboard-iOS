@@ -15,7 +15,7 @@ let kButtonHeight = Float(51.0)
 let kButtonHPadding = Float(3.0)
 let kButtonVPadding = Float(3.0)
 
-let kScrollSensetivityKey = "kScrollSensetivityKey"
+let kScrollSensetivity = Float(8.0)
 
 class KeyboardViewController: UIInputViewController
 {
@@ -97,7 +97,7 @@ class KeyboardViewController: UIInputViewController
     self.motionManager.startGyroUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(gyroData: CMGyroData!, error: NSError!) in
       var yRot = Float(gyroData.rotationRate.y)
       var xPos = self.scrollView!.contentOffset.x
-      var newPos = xPos + (yRot * self.scrollSensitivity())
+      var newPos = xPos + (yRot * kScrollSensetivity)
       if newPos >= Float(0.0) && newPos <= self.scrollViewMaxScroll()
       {
         self.scrollView!.contentOffset = CGPoint(x: newPos, y: 0.0)
@@ -118,11 +118,6 @@ extension KeyboardViewController
   func scrollViewMaxScroll() -> Float
   {
     return self.scrollView!.contentSize.width - self.scrollView!.frame.size.width
-  }
-  
-  func scrollSensitivity() -> Float
-  {
-    return NSUserDefaults.standardUserDefaults().floatForKey(kScrollSensetivityKey)
   }
 }
 

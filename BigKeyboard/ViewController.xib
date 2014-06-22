@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BigKeyboard" customModuleProvider="target">
             <connections>
                 <outlet property="label" destination="RkU-vY-iaw" id="3Jj-zt-BKv"/>
-                <outlet property="slider" destination="E6e-dX-b3M" id="TQh-Bh-noQ"/>
                 <outlet property="textField" destination="59d-Z9-cHH" id="erS-vy-dHY"/>
                 <outlet property="view" destination="iN0-l3-epB" id="oFO-yb-goc"/>
             </connections>
@@ -35,25 +34,13 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="E6e-dX-b3M">
-                    <rect key="frame" x="10" y="175" width="300" height="31"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="qoB-cT-xzA"/>
-                    </constraints>
-                    <connections>
-                        <action selector="sliderMoved:" destination="-1" eventType="valueChanged" id="CJA-MI-Qmj"/>
-                    </connections>
-                </slider>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="59d-Z9-cHH" secondAttribute="trailing" constant="10" id="17e-a6-vS0"/>
                 <constraint firstItem="RkU-vY-iaw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="110" id="9FR-oy-iVg"/>
                 <constraint firstItem="RkU-vY-iaw" firstAttribute="top" secondItem="59d-Z9-cHH" secondAttribute="bottom" constant="28" id="DCG-UZ-c1U"/>
-                <constraint firstAttribute="trailing" secondItem="E6e-dX-b3M" secondAttribute="trailing" constant="12" id="Ejk-qY-p3k"/>
-                <constraint firstItem="E6e-dX-b3M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="Uee-GD-SlJ"/>
                 <constraint firstItem="59d-Z9-cHH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="hxr-Za-VyN"/>
-                <constraint firstItem="E6e-dX-b3M" firstAttribute="top" secondItem="RkU-vY-iaw" secondAttribute="bottom" constant="16" id="jMq-cT-zac"/>
                 <constraint firstItem="59d-Z9-cHH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="rEK-IL-cvs"/>
                 <constraint firstAttribute="trailing" secondItem="RkU-vY-iaw" secondAttribute="trailing" constant="110" id="wTf-9M-HLA"/>
             </constraints>
