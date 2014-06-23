@@ -13,6 +13,7 @@ let kScrollSensetivityKey = "kScrollSensetivityKey"
 class ViewController: UIViewController, UITextFieldDelegate
 {
   @IBOutlet var textField : UITextField
+  @IBOutlet var secureTextField : UITextField
   @IBOutlet var label : UILabel
   
   override func viewDidLoad()
@@ -22,6 +23,8 @@ class ViewController: UIViewController, UITextFieldDelegate
     // Show keyboard on start
     self.textField.becomeFirstResponder()
     self.textField.delegate = self
+    
+    self.secureTextField.delegate = self
   }
   
   // Hook so new line can be detected
