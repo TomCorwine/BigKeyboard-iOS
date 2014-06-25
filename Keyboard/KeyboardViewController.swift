@@ -19,7 +19,7 @@ let kScrollSensetivity = Float(8.0)
 
 class KeyboardViewController: UIInputViewController
 {
-  var motionManager = CMMotionManager()
+  let motionManager = CMMotionManager()
   var scrollView: UIScrollView?
 
   override func viewDidLoad()
@@ -64,22 +64,22 @@ class KeyboardViewController: UIInputViewController
     }
 
     self.scrollView!.contentSize = CGSize(width: maxh, height: self.scrollView!.frame.size.height)
-    
-    var button = UIButton(frame: CGRect(x: kButtonHPadding, y: v, width: 50.0, height: kButtonHeight))
+
+    var button = UIButton(frame: CGRectMake(kButtonHPadding, v, 50.0, kButtonHeight))
     button.backgroundColor = UIColor.darkGrayColor()
     button.setTitle("NXT", forState: .Normal)
     button.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
     self.inputView.addSubview(button)
     
     var x = button.frame.origin.x + button.frame.size.width + kButtonHPadding
-    button = UIButton(frame: CGRect(x: x, y: v, width: 200.0, height: kButtonHeight))
+    button = UIButton(frame: CGRectMake(x, v, 200.0, kButtonHeight))
     button.backgroundColor = UIColor.darkGrayColor()
     button.setTitle("space", forState: .Normal)
     button.addTarget(self, action: "buttonPress:", forControlEvents: .TouchUpInside)
     self.inputView.addSubview(button)
 
     x = button.frame.origin.x + button.frame.size.width + kButtonHPadding
-    button = UIButton(frame: CGRect(x: x, y: v, width: 60.0, height: kButtonHeight))
+    button = UIButton(frame: CGRectMake(x, v, 60.0, kButtonHeight))
     button.backgroundColor = UIColor.darkGrayColor()
     button.setTitle("return", forState: .Normal)
     button.addTarget(self, action: "buttonPress:", forControlEvents: .TouchUpInside)
@@ -95,6 +95,7 @@ class KeyboardViewController: UIInputViewController
 
     // Activate gyro and provide block to move keyboard upon new gyro data
     self.motionManager.startGyroUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: {(gyroData: CMGyroData!, error: NSError!) in
+      
       var yRot = Float(gyroData.rotationRate.y)
       var xPos = self.scrollView!.contentOffset.x
       var newPos = xPos + (yRot * kScrollSensetivity)
